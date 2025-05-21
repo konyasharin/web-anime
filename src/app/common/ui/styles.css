@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+:root {
+    --black-light-700: #262626;
+    --black-light-900: #151515;
+}
