@@ -83,6 +83,17 @@ export default tseslint.config(
           ]
         }
       ],
+      "boundaries/entry-point": [
+        "error",
+        {
+          "rules": [
+            {
+              "target": ["**/*"],
+              "allow": ["index.{ts,tsx}", "types.{ts,tsx}"],
+            },
+          ],
+        },
+      ],
       'simple-import-sort/imports': [
         'warn',
         {
@@ -183,6 +194,32 @@ export default tseslint.config(
       "lines-between-class-members": ["error", "always"],
     },
     settings: {
+      'boundaries/elements': [
+        {
+          'type': 'app',
+          'pattern': 'src/app/**'
+        },
+        {
+          'type': 'pages',
+          'pattern': 'src/pages/**'
+        },
+        {
+          'type': 'widgets',
+          'pattern': 'src/widgets/**'
+        },
+        {
+          'type': 'features',
+          'pattern': 'src/features/**'
+        },
+        {
+          'type': 'entities',
+          'pattern': 'src/entities/**'
+        },
+        {
+          'type': 'shared',
+          'pattern': 'src/shared/**'
+        },
+      ],
       'import/resolver': {
         'typescript': {
           'project': 'tsconfig.app.json'
